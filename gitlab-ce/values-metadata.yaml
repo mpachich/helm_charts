@@ -1,0 +1,229 @@
+## Metadata for RabbitMQ configuration
+## This metadata is used to augment the value.yaml to drive ICP UI for configuration of the Helm chart installation
+
+image:
+  __metadata:
+    label: "GitLab docker image"
+
+  repository:
+      __metadata:
+        name: "repository"
+        label: "Docker repository"
+        description: "Docker repository to pull the master image from."
+        type: "string"
+        immutable: "false"
+        required: true
+  tag:
+    __metadata:
+      name: "tag"
+      label: "Tag"
+      description: "Docker master image tag to pull"
+      type: "string"
+      immutable: "false"
+      required: true
+  pullPolicy:
+    __metadata:
+      name: "pullPolicy"
+      label: "Docker master image pull policy"
+      description: "Always, Never, or IfNotPresent. Defaults to IfNotPresent"
+      type: "string"
+      immutable: "false"
+      required: true
+      options:
+      - label: "IfNotPresent"
+        value: "IfNotPresent"
+      - label: "Always"
+        value: "Always"
+      - label: "Never"
+        value: "Never"
+
+externalUrl:
+  __metadata:
+    name: "externalUrl"
+    label: "External URL"
+    description: "External URL"
+    type: "string"
+    immutable: "false"
+    required: true
+
+gitlabRootPassword:
+  __metadata:
+    name: "gitlabRootPassword"
+    label: "Root password"
+    description: "GitLab root password.."
+    type: "password"
+    immutable: "false"
+    required: true
+
+serviceType:
+  __metadata:
+    name: "serviceType"
+    label: "Service Type"
+    description: "Kubernetes Service Type. Default LoadBalancer"
+    type: "string"
+    immutable: "false"
+    required: true
+    options:
+    - label: "LoadBalancer"
+      value: "LoadBalancer"
+    - label: "NodePort"
+      value: "NodePort"
+
+sshPort:
+  __metadata:
+    name: "sshPort"
+    label: "SSH Port"
+    description: "SSH Port"
+    type: "string"
+    immutable: "true"
+    required: "false"
+
+httpPort:
+  __metadata:
+    name: "httpPort"
+    label: "HTTP Port"
+    description: "HTTP Port"
+    type: "string"
+    immutable: "true"
+    required: "false"
+
+httpsPort:
+  __metadata:
+    name: "httpsPort"
+    label: "HTTPS Port"
+    description: "HTTPS Port"
+    type: "string"
+    immutable: "true"
+    required: "false"
+
+livenessPort:
+  __metadata:
+    name: "livenessPort"
+    label: "Liveness Port"
+    description: "Liveness Port"
+    type: "string"
+    immutable: "true"
+    required: "false"
+
+readinessPort:
+  __metadata:
+    name: "readinessPort"
+    label: "Readiness Port"
+    description: "Readiness Port"
+    type: "string"
+    immutable: "true"
+    required: "false"
+
+resources: 
+  __metadata:
+    label: "Resources"
+
+  requests: 
+    __metadata:
+      label: "Requests"
+
+      memory:
+        __metadata:
+          name: "req_memory"
+          label: "Memory"
+          description: "Memory"
+          type: "string"
+          immutable: "false"
+          required: "false"
+
+      cpu:
+        __metadata:
+          name: "req_cpu"
+          label: "CPU Requested"
+          description: "CPU Requested"
+          type: "string"
+          immutable: "false"
+          required: "false"
+
+  limits: 
+    __metadata:
+      label: "Limits"
+
+      memory:
+        __metadata:
+          name: "lim_memory"
+          label: "Memory Limit"
+          description: "Memory Limit"
+          type: "string"
+          immutable: "false"
+          required: "false"
+
+      cpu:
+        __metadata:
+          name: "lim_cpu"
+          label: "CPU Limit"
+          description: "CPU  Limit"
+          type: "string"
+          immutable: "false"
+          required: "false"
+
+persistence:
+  __metadata:
+    label: "Persistence"
+
+  gitlabEtc:
+    __metadata:
+      label: "gitlabEtc"
+
+    enabled:
+      __metadata:
+        name: "gitlabetc_enabled"
+        label: "GitLabEtc Enabled"
+        description: "GitLabEtc Enabled"
+        type: "boolean"
+        immutable: "false"
+        required: "false"
+
+    size:
+      __metadata:
+        name: "gitlabetc_size"
+        label: "GitLabEtc Size"
+        description: "GitLabEtc Size"
+        type: "string"
+        immutable: "false"
+        required: "false"
+
+    accessMode:
+      __metadata:
+        name: "gitlabetc_accessMode"
+        label: "GitLabEtc Access Mode"
+        description: "GitLabEtc Access Mode"
+        type: "string"
+        immutable: "true"
+        required: "false"
+
+  gitlabData:
+    __metadata:
+      label: "gitlabData"
+
+    enabled:
+      __metadata:
+        name: "gitlabData_enabled"
+        label: "GitLabData Enabled"
+        description: "GitLabData Enabled"
+        type: "boolean"
+        immutable: "false"
+        required: "false"
+
+    size:
+      __metadata:
+        name: "gitlabData_size"
+        label: "GitLabData Size"
+        description: "GitLabData Size"
+        type: "string"
+        immutable: "false"
+        required: "false"
+
+    accessMode:
+      __metadata:
+        name: "gitlabData_accessMode"
+        label: "GitLabData Access Mode"
+        description: "GitLabData Access Mode"
+        type: "string"
+        immutable: "true"
+        required: "false"
