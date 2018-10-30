@@ -188,6 +188,15 @@ persistence:
         immutable: "false"
         required: "false"
 
+    storageClass:
+      __metadata:
+        name: "gitlabetc_storage_class"
+        label: "gitlabEtc Storage Class"
+        description: "gitlabEtc Storage Class"
+        type: "string"
+        immutable: "false"
+        required: "true"
+
     accessMode:
       __metadata:
         name: "gitlabetc_accessMode"
@@ -218,6 +227,15 @@ persistence:
         type: "string"
         immutable: "false"
         required: "false"
+
+    storageClass:
+      __metadata:
+        name: "gitlabdata_storage_class"
+        label: "gitlabData Storage Class"
+        description: "gitlabData Storage Class"
+        type: "string"
+        immutable: "false"
+        required: "true"
 
     accessMode:
       __metadata:

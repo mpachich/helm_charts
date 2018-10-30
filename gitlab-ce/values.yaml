@@ -104,6 +104,7 @@ postgresql:
   persistence:
     enabled: False
     size: 10Gi
+    storageClass: ""
 
 ## Configuration values for the redis dependency.
 ## ref: https://github.com/kubernetes/charts/blob/master/stable/redis/README.md
@@ -118,3 +119,4 @@ redis:
   persistence:
     enabled: False
     size: 10Gi
+    storageClass: ""
