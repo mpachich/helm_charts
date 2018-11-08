@@ -226,7 +226,7 @@ persistence:
         name: "gitlabData_enabled"
         label: "GitLabData Enabled"
         description: "GitLabData Enabled"
-        type: "boolean"
+        type: "string"
         immutable: false
         required: false
 
