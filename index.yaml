@@ -2,10 +2,10 @@ apiVersion: v1
 entries:
   gitlab-ce:
   - appVersion: 11.3.6
-    created: 2018-10-30T11:34:44.336647006+05:30
+    created: 2018-11-08T11:44:33.96342825+05:30
     deprecated: true
     description: GitLab Community Edition
-    digest: 22db83277cedc53381c640acfea8d0195544a958a7939d8e22a96bfafda5a3e7
+    digest: 7cc00c140e26f13778cc7aa6e258c77a0a5c8a1d22da83772a6c6f5cf77658dc
     home: https://about.gitlab.com
     icon: https://gitlab.com/uploads/group/avatar/6543/gitlab-logo-square.png
     keywords:
@@ -22,4 +22,4 @@ entries:
     urls:
     - https://mpachich.github.io/helm_charts/gitlab-ce-0.2.2.tgz
     version: 0.2.2
-generated: 2018-10-30T11:34:44.333848627+05:30
+generated: 2018-11-08T11:44:33.961729696+05:30

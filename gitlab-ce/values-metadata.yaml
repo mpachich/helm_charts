@@ -11,7 +11,7 @@ image:
         label: "Docker repository"
         description: "Docker repository to pull the master image from."
         type: "string"
-        immutable: "false"
+        immutable: false
         required: true
   tag:
     __metadata:
@@ -19,7 +19,7 @@ image:
       label: "Tag"
       description: "Docker master image tag to pull"
       type: "string"
-      immutable: "false"
+      immutable: false
       required: true
   pullPolicy:
     __metadata:
@@ -27,7 +27,7 @@ image:
       label: "Docker master image pull policy"
       description: "Always, Never, or IfNotPresent. Defaults to IfNotPresent"
       type: "string"
-      immutable: "false"
+      immutable: false
       required: true
       options:
       - label: "IfNotPresent"
@@ -43,7 +43,7 @@ externalUrl:
     label: "External URL"
     description: "External URL"
     type: "string"
-    immutable: "false"
+    immutable: false
     required: true
 
 gitlabRootPassword:
@@ -52,7 +52,7 @@ gitlabRootPassword:
     label: "Root password"
     description: "GitLab root password.."
     type: "password"
-    immutable: "false"
+    immutable: false
     required: true
 
 serviceType:
@@ -61,7 +61,7 @@ serviceType:
     label: "Service Type"
     description: "Kubernetes Service Type. Default LoadBalancer"
     type: "string"
-    immutable: "false"
+    immutable: false
     required: true
     options:
     - label: "LoadBalancer"
@@ -69,14 +69,25 @@ serviceType:
     - label: "NodePort"
       value: "NodePort"
 
+ingress:
+  __metadata:
+    label: "ingress"
+    enabled:
+      __metadata:
+        name: "ingress_enabled"
+        label: "Ingress Enabled"
+        Description: "Ingress Enabled"
+        type: "boolean"
+
+
 sshPort:
   __metadata:
     name: "sshPort"
     label: "SSH Port"
     description: "SSH Port"
     type: "string"
-    immutable: "true"
-    required: "false"
+    immutable: true
+    required: false
 
 httpPort:
   __metadata:
@@ -84,8 +95,8 @@ httpPort:
     label: "HTTP Port"
     description: "HTTP Port"
     type: "string"
-    immutable: "true"
-    required: "false"
+    immutable: true
+    required: false
 
 httpsPort:
   __metadata:
@@ -93,8 +104,8 @@ httpsPort:
     label: "HTTPS Port"
     description: "HTTPS Port"
     type: "string"
-    immutable: "true"
-    required: "false"
+    immutable: true
+    required: false
 
 livenessPort:
   __metadata:
@@ -102,8 +113,8 @@ livenessPort:
     label: "Liveness Port"
     description: "Liveness Port"
     type: "string"
-    immutable: "true"
-    required: "false"
+    immutable: true
+    required: false
 
 readinessPort:
   __metadata:
@@ -111,8 +122,8 @@ readinessPort:
     label: "Readiness Port"
     description: "Readiness Port"
     type: "string"
-    immutable: "true"
-    required: "false"
+    immutable: true
+    required: false
 
 resources: 
   __metadata:
@@ -128,8 +139,8 @@ resources:
           label: "Memory"
           description: "Memory"
           type: "string"
-          immutable: "false"
-          required: "false"
+          immutable: false
+          required: false
 
       cpu:
         __metadata:
@@ -137,8 +148,8 @@ resources:
           label: "CPU Requested"
           description: "CPU Requested"
           type: "string"
-          immutable: "false"
-          required: "false"
+          immutable: false
+          required: false
 
   limits: 
     __metadata:
@@ -150,8 +161,8 @@ resources:
           label: "Memory Limit"
           description: "Memory Limit"
           type: "string"
-          immutable: "false"
-          required: "false"
+          immutable: false
+          required: false
 
       cpu:
         __metadata:
@@ -159,8 +170,8 @@ resources:
           label: "CPU Limit"
           description: "CPU  Limit"
           type: "string"
-          immutable: "false"
-          required: "false"
+          immutable: false
+          required: false
 
 persistence:
   __metadata:
@@ -176,8 +187,8 @@ persistence:
         label: "GitLabEtc Enabled"
         description: "GitLabEtc Enabled"
         type: "boolean"
-        immutable: "false"
-        required: "false"
+        immutable: false
+        required: false
 
     size:
       __metadata:
@@ -185,8 +196,8 @@ persistence:
         label: "GitLabEtc Size"
         description: "GitLabEtc Size"
         type: "string"
-        immutable: "false"
-        required: "false"
+        immutable: false
+        required: false
 
     storageClass:
       __metadata:
@@ -194,8 +205,8 @@ persistence:
         label: "gitlabEtc Storage Class"
         description: "gitlabEtc Storage Class"
         type: "string"
-        immutable: "false"
-        required: "true"
+        immutable: false
+        required: true
 
     accessMode:
       __metadata:
@@ -203,8 +214,8 @@ persistence:
         label: "GitLabEtc Access Mode"
         description: "GitLabEtc Access Mode"
         type: "string"
-        immutable: "true"
-        required: "false"
+        immutable: true
+        required: false
 
   gitlabData:
     __metadata:
@@ -216,8 +227,8 @@ persistence:
         label: "GitLabData Enabled"
         description: "GitLabData Enabled"
         type: "boolean"
-        immutable: "false"
-        required: "false"
+        immutable: false
+        required: false
 
     size:
       __metadata:
@@ -225,8 +236,8 @@ persistence:
         label: "GitLabData Size"
         description: "GitLabData Size"
         type: "string"
-        immutable: "false"
-        required: "false"
+        immutable: false
+        required: false
 
     storageClass:
       __metadata:
@@ -234,8 +245,8 @@ persistence:
         label: "gitlabData Storage Class"
         description: "gitlabData Storage Class"
         type: "string"
-        immutable: "false"
-        required: "true"
+        immutable: false
+        required: true
 
     accessMode:
       __metadata:
@@ -243,5 +254,5 @@ persistence:
         label: "GitLabData Access Mode"
         description: "GitLabData Access Mode"
         type: "string"
-        immutable: "true"
-        required: "false"
+        immutable: true
+        required: false
