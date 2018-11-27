@@ -2,7 +2,7 @@ apiVersion: v1
 entries:
   gitlab-ce:
   - appVersion: 11.3.6
-    created: 2018-11-08T11:49:44.281398171+05:30
+    created: 2018-11-27T16:06:47.840692562+05:30
     deprecated: true
     description: GitLab Community Edition
     digest: 4b10d10c7647aa85c1d3c13352e14b0ae899a4b4d22ce820b0d402b2c88adf76
@@ -22,4 +22,25 @@ entries:
     urls:
     - https://mpachich.github.io/helm_charts/gitlab-ce-0.2.2.tgz
     version: 0.2.2
-generated: 2018-11-08T11:49:44.279968046+05:30
+  jenkins:
+  - appVersion: 2.121.3
+    created: 2018-11-27T16:06:47.841622243+05:30
+    description: Open source continuous integration server. It supports multiple SCM
+      tools including CVS, Subversion and Git. It can execute Apache Ant and Apache
+      Maven-based projects as well as arbitrary scripts.
+    digest: bb50b06c73b15013a1ad5313c51d74cbcd7b6f428bdc5ff92ae73a83cb34e37b
+    home: https://jenkins.io/
+    icon: https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png
+    maintainers:
+    - email: lachlan.evenson@microsoft.com
+      name: lachie83
+    - email: viglesias@google.com
+      name: viglesiasce
+    name: jenkins
+    sources:
+    - https://github.com/jenkinsci/jenkins
+    - https://github.com/jenkinsci/docker-jnlp-slave
+    urls:
+    - https://mpachich.github.io/helm_charts/jenkins-0.19.0.tgz
+    version: 0.19.0
+generated: 2018-11-27T16:06:47.839215227+05:30
